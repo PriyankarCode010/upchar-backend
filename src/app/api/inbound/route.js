@@ -8,6 +8,7 @@ export async function POST(request) {
     const fromNumber = formData.get('From');
 
     console.log('Incoming message:', incomingMessage, 'from:', fromNumber);
+    console.log('Received message:', incomingMessage);
 
     // Create TwiML response
     const twiml = new twilio.twiml.MessagingResponse();
