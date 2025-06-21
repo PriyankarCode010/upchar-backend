@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "echo Building... && next build && echo Build complete!",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,7 +12,7 @@
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sarvamai": "^1.0.0",
+    "sarvamai": "^0.1.5-a1",
     "twilio": "^4.23.0"
   },
   "devDependencies": {
