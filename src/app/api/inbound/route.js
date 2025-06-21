@@ -1,6 +1,5 @@
 import twilio from 'twilio';
 
-
 let incomingMessage = "";
 let fromNumber = "";
 export async function POST(request) {
@@ -46,7 +45,8 @@ export async function POST(request) {
 export async function GET() {
   // Handle GET requests (for testing)
   const twiml = new twilio.twiml.MessagingResponse();
-  twiml.message('Hello there!');
+  const message = "Hello there!" + incomingMessage + " - " + fromNumber;
+  twiml.message(message);
 
   console.log('Incoming message:', incomingMessage, 'from:', fromNumber);
   console.log('Received message:', incomingMessage);
