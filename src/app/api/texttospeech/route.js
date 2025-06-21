@@ -1,11 +1,11 @@
 import { SarvamAIClient } from "sarvamai";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 const client = new SarvamAIClient({
-  apiSubscriptionKey: process.env.SARVAM_API_KEY!,
+  apiSubscriptionKey: process.env.SARVAM_API_KEY,
 });
 
-export async function POST(req: NextRequest) {
+export async function POST(req) {
   try {
     const { text, lang } = await req.json();
 
