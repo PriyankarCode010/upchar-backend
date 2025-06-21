@@ -5,10 +5,8 @@ export default function Home() {
   const [text, setText] = useState('');
   const [lang, setLang] = useState('hi-IN');
   const [audioUrl, setAudioUrl] = useState('');
-  const [loading, setLoading] = useState(false);
 
   const convertTextToSpeech = async () => {
-    setLoading(true);
     const res = await fetch('/api/texttospeech', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -16,7 +14,6 @@ export default function Home() {
     });
 
     const data = await res.json();
-    setLoading(false);
     console.log("-----------",data);
     if (data.audioUrl) {
       setAudioUrl(data.audioUrl);

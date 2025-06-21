@@ -10,7 +10,6 @@ export async function POST(request) {
   try {
     // Get the incoming message data
     const body = await request.json();
-    const userMessage = body.message || 'Hello there!';
     const userPhone = body.phone || '+917022112496';
 
     // Send "Hello there!" in response to any user message
